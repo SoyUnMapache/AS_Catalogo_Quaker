@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="1024dp"
+    android:layout_height="768dp"
+    tools:context="com.edm.josue.catalogoquaker.MainActivity">
+
+    <VideoView
+        android:id="@+id/ScreenSaver"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="1024dp"
+        android:layout_height="768dp"
+        android:alpha="0.0"
+        android:background="@android:color/background_light" />
+
+</android.support.constraint.ConstraintLayout>

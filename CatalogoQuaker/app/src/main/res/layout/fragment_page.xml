@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainPageContainer"
+    android:layout_width="1024dp"
+    android:layout_height="768dp">
+
+    <Button
+        android:id="@+id/btnRecipe1"
+        android:layout_width="200dp"
+        android:layout_height="205dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtRecipe1"
+        android:layout_width="200dp"
+        android:layout_height="42.5dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        android:textAlignment="textStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRecipe1" />
+
+    <Button
+        android:id="@+id/btnRecipe2"
+        android:layout_width="200dp"
+        android:layout_height="205dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintStart_toEndOf="@+id/btnRecipe1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtRecipe2"
+        android:layout_width="200dp"
+        android:layout_height="42.5dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        android:textAlignment="textStart"
+        app:layout_constraintStart_toEndOf="@+id/txtRecipe1"
+        app:layout_constraintTop_toBottomOf="@+id/btnRecipe2" />
+
+    <Button
+        android:id="@+id/btnRecipe3"
+        android:layout_width="200dp"
+        android:layout_height="205dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintStart_toEndOf="@+id/btnRecipe2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtRecipe3"
+        android:layout_width="200dp"
+        android:layout_height="42.5dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        android:textAlignment="textStart"
+        app:layout_constraintStart_toEndOf="@+id/txtRecipe2"
+        app:layout_constraintTop_toBottomOf="@+id/btnRecipe3" />
+
+    <Button
+        android:id="@+id/btnRecipe4"
+        android:layout_width="200dp"
+        android:layout_height="205dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintStart_toEndOf="@+id/btnRecipe3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtRecipe4"
+        android:layout_width="200dp"
+        android:layout_height="42.5dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        android:textAlignment="textStart"
+        app:layout_constraintStart_toEndOf="@+id/txtRecipe3"
+        app:layout_constraintTop_toBottomOf="@+id/btnRecipe4" />
+
+    <Button
+        android:id="@+id/btnRecipe5"
+        android:layout_width="200dp"
+        android:layout_height="205dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRecipe1" />
+
+    <TextView
+        android:id="@+id/txtRecipe5"
+        android:layout_width="200dp"
+        android:layout_height="42.5dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        android:textAlignment="textStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRecipe5" />
+
+    <Button
+        android:id="@+id/btnRecipe6"
+        android:layout_width="200dp"
+        android:layout_height="205dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toEndOf="@+id/btnRecipe5"
+        app:layout_constraintTop_toBottomOf="@+id/txtRecipe2" />
+
+    <TextView
+        android:id="@+id/txtRecipe6"
+        android:layout_width="200dp"
+        android:layout_height="42.5dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        android:textAlignment="textStart"
+        app:layout_constraintStart_toEndOf="@+id/txtRecipe5"
+        app:layout_constraintTop_toBottomOf="@+id/btnRecipe6" />
+
+    <Button
+        android:id="@+id/btnRecipe7"
+        android:layout_width="200dp"
+        android:layout_height="205dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toEndOf="@+id/btnRecipe6"
+        app:layout_constraintTop_toBottomOf="@+id/txtRecipe3" />
+
+    <TextView
+        android:id="@+id/txtRecipe7"
+        android:layout_width="200dp"
+        android:layout_height="42.5dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        android:textAlignment="textStart"
+        app:layout_constraintStart_toEndOf="@+id/txtRecipe6"
+        app:layout_constraintTop_toBottomOf="@+id/btnRecipe7" />
+
+    <Button
+        android:id="@+id/btnRecipe8"
+        android:layout_width="200dp"
+        android:layout_height="205dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toEndOf="@+id/btnRecipe7"
+        app:layout_constraintTop_toBottomOf="@+id/txtRecipe4" />
+
+    <TextView
+        android:id="@+id/txtRecipe8"
+        android:layout_width="200dp"
+        android:layout_height="42.5dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        android:textAlignment="textStart"
+        app:layout_constraintStart_toEndOf="@+id/txtRecipe7"
+        app:layout_constraintTop_toBottomOf="@+id/btnRecipe8" />
+
+</android.support.constraint.ConstraintLayout>

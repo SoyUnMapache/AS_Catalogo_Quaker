@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.edm.josue.catalogoquaker.MainMenu">
+
+    <ImageView
+        android:id="@+id/fondo"
+        android:layout_width="1024dp"
+        android:layout_height="768dp"
+        app:srcCompat="@drawable/fondo" />
+
+    <VideoView
+        android:id="@+id/videoMainMenu"
+        android:layout_width="600dp"
+        android:layout_height="460dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="115dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnHome"
+        android:layout_width="78.5dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="50dp"
+        android:background="@drawable/logoqkr"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnBreakfasts"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="125dp"
+        android:layout_marginTop="175dp"
+        android:text="DESAYUNOS"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnDrinks"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="125dp"
+        android:layout_marginTop="281dp"
+        android:text="BEBIDAS"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnBakery"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="125dp"
+        android:layout_marginTop="387dp"
+        android:text="PANADERÍA"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnDesserts"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="125dp"
+        android:layout_marginTop="493dp"
+        android:text="POSTRES"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnBenefits"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="265dp"
+        android:layout_marginTop="655dp"
+        android:text="BENEFICIOS"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
