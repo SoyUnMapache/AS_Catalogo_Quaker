@@ -29,7 +29,7 @@ public class Reasons extends AppCompatActivity {
 
         //Referencia al video
         final VideoView videoScreenSaver = (VideoView) findViewById(R.id.videoReasons);
-        String uriVideo = "android.resource://com.edm.josue.catalogoquaker/" + R.raw.razones;
+        String uriVideo = "android.resource://com.edm.josue.catalogoquaker/" + R.raw.screensaver;
 
         //Carga y reproduce el video el video
         Uri uri2 = Uri.parse(uriVideo);

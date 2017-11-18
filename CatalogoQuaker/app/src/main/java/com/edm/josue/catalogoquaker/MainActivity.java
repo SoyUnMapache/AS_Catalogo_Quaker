@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
         //checa la fecha de la tableta y muestra el screen saver correspondiente
         if ((month >= 9 && year == 2018) || (month >= 1 && year > 2018))
-            uriVideo = "android.resource://com.edm.josue.catalogoquaker/" + R.raw.screensaver2;
+            uriVideo = "android.resource://com.edm.josue.catalogoquaker/" + R.raw.screensaver;
         else
             uriVideo = "android.resource://com.edm.josue.catalogoquaker/" + R.raw.screensaver;
 

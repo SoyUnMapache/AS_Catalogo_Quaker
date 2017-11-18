@@ -29,7 +29,7 @@ public class Benefits extends AppCompatActivity {
 
         //Referencia al video
         final VideoView videoScreenSaver = (VideoView) findViewById(R.id.videoBenefits);
-        String uriVideo = "android.resource://com.edm.josue.catalogoquaker/" + R.raw.beneficios;
+        String uriVideo = "android.resource://com.edm.josue.catalogoquaker/" + R.raw.screensaver;
 
         //Carga y reproduce el video el video
         Uri uri2 = Uri.parse(uriVideo);

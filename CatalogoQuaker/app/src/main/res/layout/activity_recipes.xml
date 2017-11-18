@@ -11,8 +11,8 @@
     <ImageView
         android:id="@+id/fondo"
         android:layout_width="1024dp"
-        android:layout_height="768dp"
-        app:srcCompat="@drawable/fondo" />
+        android:layout_height="768dp"/>
+        <!--app:srcCompat="@drawable/fondo"-->
 
     <android.support.design.widget.CoordinatorLayout
         android:id="@+id/main_content"

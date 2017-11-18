@@ -9,8 +9,8 @@
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="1024dp"
-        android:layout_height="768dp"
-        app:srcCompat="@drawable/razones" />
+        android:layout_height="768dp"/>
+        <!--app:srcCompat="@drawable/razones"-->
 
     <VideoView
         android:id="@+id/videoReasons"

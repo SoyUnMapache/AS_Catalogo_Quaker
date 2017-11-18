@@ -3,6 +3,7 @@ package com.edm.josue.catalogoquaker;
 import android.content.Intent;
 import android.graphics.drawable.AnimatedStateListDrawable;
 import android.os.Build;
+import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -27,6 +28,7 @@ import android.widget.TextView;
 import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.zip.Inflater;
@@ -45,23 +47,39 @@ public class Recipes extends AppCompatActivity {
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
+        List<Fragment> fragments;
+        List<String> titles;
+
         int totalPages;
 
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
+            fragments = new ArrayList<>();
+            titles = new ArrayList<>();
         }
 
         @Override
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
-            return PlaceholderFragment.newInstance(position + 1);
+            //return PlaceholderFragment.newInstance(position + 1, "position" + 1);
+            return fragments.get(position);
         }
 
         @Override
         public int getCount() {
             // Show total pages.
-            return totalPages;
+            return fragments.size();
+        }
+
+        public void addFragment(Fragment fragment, String title){
+            fragments.add(fragment);
+            titles.add(title);
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return titles.get(position);
         }
     }
 
@@ -89,6 +107,8 @@ public class Recipes extends AppCompatActivity {
         TextView txtTitle = (TextView) findViewById(R.id.txtTitle);
 
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        mSectionsPagerAdapter.addFragment(PlaceholderFragment.newInstance(1, "UNO"), "UNO");
+        mSectionsPagerAdapter.addFragment(PlaceholderFragment.newInstance(2, "DOS"), "DOS");
         mViewPager = (ViewPager) findViewById(R.id.PageContainer);
 
         //Checa que tipo de recetas mostrará
@@ -137,11 +157,15 @@ public class Recipes extends AppCompatActivity {
     /**
      * A placeholder fragment containing a simple view.
      */
-    public static class PlaceholderFragment extends Fragment {
+    public static class PlaceholderFragment extends Fragment implements View.OnClickListener {
         /**
          * The fragment argument representing the section number for this
          * fragment.
          */
+
+        private String nameFragment;
+        private int sectionNumber;
+
         private static final String ARG_SECTION_NUMBER = "section_number";
 
         Button Recipe1;
@@ -160,12 +184,20 @@ public class Recipes extends AppCompatActivity {
          * Returns a new instance of this fragment for the given section
          * number.
          */
-        public static PlaceholderFragment newInstance(int sectionNumber) {
+        public static PlaceholderFragment newInstance(int sectionNumber, String titleFragment) {
             PlaceholderFragment fragment = new PlaceholderFragment();
             Bundle args = new Bundle();
             args.putInt(ARG_SECTION_NUMBER, sectionNumber);
+            args.putString("TITLE_FRAGMENT", titleFragment);
             fragment.setArguments(args);
             return fragment;
+        }
+
+        @Override
+        public void onCreate(@Nullable Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            nameFragment = getArguments().getString("TITLE_FRAGMENT");
+            sectionNumber = getArguments().getInt(ARG_SECTION_NUMBER);
         }
 
         @Override
@@ -180,7 +212,23 @@ public class Recipes extends AppCompatActivity {
             Recipe6 = (Button) rootView.findViewById(R.id.btnRecipe6);
             Recipe7 = (Button) rootView.findViewById(R.id.btnRecipe7);
             Recipe8 = (Button) rootView.findViewById(R.id.btnRecipe8);
+
+            if(sectionNumber == 2){
+                Recipe1.setBackgroundResource(R.drawable.btn_atole);
+            } else {
+                Recipe1.setBackgroundResource(R.drawable.btn_avena_frambuesas);
+            }
+            Recipe1.setOnClickListener(this);
             return rootView;
+        }
+
+        @Override
+        public void onClick(View view) {
+            switch(view.getId()){
+                case R.id.btnRecipe1:
+                    Toast.makeText(getActivity(), "Button1 " + nameFragment, Toast.LENGTH_SHORT).show();
+                    break;
+            }
         }
     }
 }
